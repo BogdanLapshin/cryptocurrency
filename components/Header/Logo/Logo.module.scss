@@ -1,0 +1,20 @@
+@import '../../../styles/variables.module.scss';
+
+.logo {
+  margin-left: 70px;
+  display: flex;
+  align-items: center;
+  &__img {
+    width: 29px;
+    height: 21px;
+    background: url('../../../public/assets/logo/Logo.svg') center center no-repeat;
+    background-size: contain;
+    margin-right: 25px;
+  }
+  &__name {
+    color: $main-color;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
