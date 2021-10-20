@@ -1,0 +1,28 @@
+@import '../../../../../styles/variables.module.scss';
+.card {
+  width: 251px;
+  height: 120px;
+  box-sizing: border-box;
+  padding: 18px 26px;
+  background: $main-color;
+  border-radius: 19.8652px;
+}
+.title,
+.price {
+  font-weight: 600;
+  font-size: 13.2434px;
+  line-height: 16px;
+  letter-spacing: 0.206929px;
+  color: $second-dark;
+}
+.price {
+  font-size: 23.176px;
+  line-height: 28px;
+  margin: 10.5px 0 6.3px;
+}
+.text {
+  font-weight: normal;
+  font-size: 11.588px;
+  line-height: 14px;
+  color: $light-dark;
+}
