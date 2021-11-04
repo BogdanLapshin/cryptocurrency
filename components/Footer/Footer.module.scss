@@ -1,0 +1,30 @@
+@import '../../styles/variables.module.scss';
+.footer {
+  background: $main-bg;
+  padding-bottom: 34px;
+}
+
+.container {
+  max-width: 1231px;
+  margin: 0 auto;
+}
+
+.comment {
+  font-weight: 200;
+  font-size: 26px;
+  line-height: 110%;
+  text-align: center;
+  color: $title-color;
+  margin-bottom: 20px;
+}
+.copyright {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 180%;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #212353;
+  .terms {
+    font-weight: normal;
+  }
+}
