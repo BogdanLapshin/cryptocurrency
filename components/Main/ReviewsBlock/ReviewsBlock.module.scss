@@ -1,8 +1,8 @@
-.container {
-  max-width: 1231px;
-  margin: 0 auto;
-}
 .inner {
   max-width: 660px;
   margin: 0 auto;
+  padding-top: 52px;
+  @media screen and (max-width: 720px) {
+    padding: 0 10px;
+  }
 }

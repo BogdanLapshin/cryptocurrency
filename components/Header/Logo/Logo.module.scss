@@ -1,7 +1,7 @@
 @import '../../../styles/variables.module.scss';
 
 .logo {
-  margin-left: 70px;
+  margin-left: 83px;
   display: flex;
   align-items: center;
   &__img {
@@ -16,5 +16,11 @@
     font-weight: bold;
     font-size: 21px;
     line-height: 25px;
+  }
+  @media screen and (max-width: 480px) {
+    margin: 0 25px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

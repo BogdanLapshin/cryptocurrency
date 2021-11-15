@@ -1,11 +1,17 @@
 .cards__wrapper {
-  max-width: 805px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
-.container {
-  max-width: 1231px;
+.inner {
+  max-width: 805px;
   margin: 0 auto;
+  padding: 0 10px;
+  box-sizing: border-box;
 }

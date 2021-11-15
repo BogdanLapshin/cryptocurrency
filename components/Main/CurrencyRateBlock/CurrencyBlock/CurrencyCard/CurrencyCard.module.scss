@@ -1,14 +1,33 @@
 @import '../../../../../styles/variables.module.scss';
 .card {
-  width: 251px;
-  height: 120px;
+  width: 44.5%;
   box-sizing: border-box;
-  padding: 18px 26px;
+  padding: 21px 25px;
   background: $main-color;
   border-radius: 19.8652px;
+  &:last-child {
+    margin-top: 35px;
+  }
+  @media screen and (max-width: 1200px) {
+    padding: 18px 20px;
+  }
+  @media screen and (max-width: 1000px) {
+    width: 35%;
+  }
+  @media screen and (max-width: 720px) {
+    width: 42%;
+  }
+  @media screen and (max-width: 540px) {
+    width: 100%;
+  }
+}
+.title {
+  margin: 0;
+  margin-bottom: 19px;
 }
 .title,
-.price {
+.price,
+.percent__wrapper {
   font-weight: 600;
   font-size: 13.2434px;
   line-height: 16px;
@@ -16,13 +35,39 @@
   color: $second-dark;
 }
 .price {
-  font-size: 23.176px;
+  font-size: 23px;
   line-height: 28px;
-  margin: 10.5px 0 6.3px;
+  margin-right: 11px;
+  margin-bottom: 6px;
 }
 .text {
   font-weight: normal;
   font-size: 11.588px;
   line-height: 14px;
   color: $light-dark;
+}
+.arrow {
+  width: 10px;
+  height: 9px;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+}
+.percent__wrapper,
+.price__wrapper {
+  display: flex;
+  align-items: center;
+}
+.percent__down {
+  color: #fe805c;
+}
+.percent__up {
+  color: #4643d3;
+}
+@media screen and (max-width: 1200px) {
+  .card:last-child {
+    margin: 0;
+  }
 }

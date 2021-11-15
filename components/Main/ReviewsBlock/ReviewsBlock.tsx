@@ -1,10 +1,11 @@
 import Title from '../Title/Title';
 import ReviewCard from './ReviewCard/ReviewCard';
 import styles from './ReviewsBlock.module.scss';
+import main_styles from '../../../styles/Home.module.scss';
 const ReviewsBlock = () => {
   return (
     <section className={styles.reviews__block}>
-      <div className={styles.container}>
+      <div className={main_styles.container}>
         <div className={styles.inner}>
           <Title title="What Other Coders Are Saying..." />
           <ReviewCard

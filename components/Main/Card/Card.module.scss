@@ -1,6 +1,6 @@
 @import '../../../styles/variables.module.scss';
 .card {
-  width: 40%;
+  width: 485px;
   height: 265px;
   background: $main-color;
   box-shadow: 0px 2px 28px rgba(0, 0, 0, 0.25);
@@ -10,6 +10,15 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    background: $main-light;
+    transform: translateY(-20px);
+    & .person__info,
+    & .message {
+      color: white;
+    }
+  }
 }
 .photo__wrapper {
   width: 115px;
@@ -22,24 +31,69 @@
     object-fit: cover;
   }
 }
+.currency__card {
+  transition: all 0.3s ease-in-out;
+  margin-left: 10px;
+  &:hover {
+    box-shadow: 0px 2px 28px rgba(25, 0, 246, 0.281);
+  }
+  @media screen and (max-width: 1000px) {
+    margin-bottom: 30px;
+    width: 70%;
+    margin-left: 0;
+  }
+  @media screen and (max-width: 640px) {
+    margin-bottom: 30px;
+    width: 80%;
+  }
+  @media screen and (max-width: 540px) {
+    margin-bottom: 30px;
+    width: 90%;
+    padding: 20px;
+  }
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: auto;
+  }
+  .photo__wrapper {
+    @media screen and (max-width: 480px) {
+      margin: 0;
+    }
+  }
+}
+
 .person__info {
   font-weight: normal;
   font-size: 20.392px;
   line-height: 25px;
   color: $title-color;
+  transition: all 0.3s ease-in-out;
   .name {
     font-weight: 600;
+  }
+  @media screen and (max-width: 480px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0 15px;
   }
 }
 .message {
   max-width: 310px;
-  font-style: italic;
   font-weight: 300;
   font-size: 18.5382px;
   line-height: 23px;
   text-align: center;
   color: $title-color;
   margin-left: 93px;
+  transition: all 0.3s ease-in-out;
+  @media screen and (max-width: 600px) {
+    max-width: 90%;
+  }
+  @media screen and (max-width: 480px) {
+    margin: 0;
+  }
 }
 .pros__card {
   width: 249px;
@@ -48,13 +102,19 @@
     drop-shadow(0px 14.65px 43.95px rgba(0, 0, 0, 0.06));
   box-shadow: none;
   border-radius: 21.975px;
-  padding: 26px;
+  transition: all 0.3s ease-in-out;
+  padding: 25px;
   flex-wrap: nowrap;
   flex-direction: column;
+  position: relative;
+  &:hover {
+    filter: drop-shadow(0px 69.5875px 139.175px rgba(4, 0, 255, 0.1))
+      drop-shadow(0px 14.65px 43.95px rgba(0, 17, 255, 0.1));
+  }
   .message {
     margin-left: 0;
     margin-top: 30px;
-    width: 199px;
+    width: 100%;
     line-height: 26px;
     text-align: center;
   }
@@ -64,6 +124,19 @@
     border-radius: 50%;
     margin-right: 0;
     margin-bottom: 12px;
+  }
+  @media screen and (max-width: 890px) {
+    width: 30%;
+  }
+  @media screen and (max-width: 720px) {
+    height: 320px;
+  }
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    height: 293px;
+    &:hover {
+      transform: translateY(-5px);
+    }
   }
 }
 
